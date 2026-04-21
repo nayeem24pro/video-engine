@@ -1,3 +1,8 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/api/generate" }]
+  "functions": {
+    "api/*.js": { "maxDuration": 10 }
+  },
+  "rewrites": [
+    { "source": "/api/generate", "destination": "/api/generate-script" }
+  ]
 }
